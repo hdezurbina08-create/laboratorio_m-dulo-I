@@ -1,0 +1,13 @@
+public class PagoTarjeta extends Pago {
+    private String numeroTarjeta;
+
+    public PagoTarjeta(double monto, String numeroTarjeta) {
+        super(monto);
+        this.numeroTarjeta = numeroTarjeta;
+    }
+
+    @Override
+    public void procesarPago() {
+        System.out.println("Procesando pago con Tarjeta (" + numeroTarjeta + ") por un monto de: $" + getMonto());
+    }
+}
